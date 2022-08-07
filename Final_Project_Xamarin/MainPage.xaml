@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Final_Project_Xamarin.MainPage"
+             NavigationPage.HasNavigationBar="False">
+
+    <StackLayout>
+        <Frame BackgroundColor="#3E3E38" Padding="24" CornerRadius="0">
+            <Image Source="team.png" HeightRequest="130" WidthRequest="130" />
+        </Frame>
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <StackLayout Orientation="Horizontal" Padding="10">
+                <Image Source="email.png" HeightRequest="30" WidthRequest="30" />
+                <Entry x:Name="txtUsername" Placeholder="Username" HorizontalOptions="FillAndExpand"/>
+
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Padding="10">
+                <Image Source="lock.png" HeightRequest="30" WidthRequest="30" />
+                <Entry x:Name="txtPassword" IsPassword="True" Placeholder="Password" HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+        </StackLayout>
+        <StackLayout VerticalOptions="EndAndExpand">
+
+            <Button x:Name="btnLogin" Text="Login" BackgroundColor="#3E3E38" TextColor="White" FontSize="20" CornerRadius="20" Margin="5" Clicked="btnLogin_Clicked"/>
+            <Button x:Name="btnSignUp" Text="Signup" TextColor="Blue" BackgroundColor="Transparent" FontSize="18"  Margin="5" Clicked="btnSignUp_Clicked"/>
+        </StackLayout>
+
+    </StackLayout>
+
+</ContentPage>

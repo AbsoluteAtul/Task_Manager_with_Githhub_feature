@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Final_Project_Xamarin.TaskDetailPage">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand" Spacing="20" Padding="10,0,10,0">
+            <Frame CornerRadius="10">
+                <StackLayout VerticalOptions="CenterAndExpand" Spacing="20">
+                    <Entry x:Name="txtTaskId" Text="{Binding TaskId}" Placeholder="Task Id"/>
+                    <Entry x:Name="txtDescription" Text="{Binding Description}" Placeholder="Description"/>
+                    <StackLayout Orientation="Horizontal">
+                        <DatePicker x:Name="dpDate"/>
+                        <Picker HorizontalOptions="FillAndExpand" x:Name="pickerUser" ItemDisplayBinding="{Binding Username}"/>
+                    </StackLayout>
+
+
+                </StackLayout>
+            </Frame>
+            <Button x:Name="btnEdit" Text="Edit" BackgroundColor="DeepSkyBlue" CornerRadius="10" Clicked="btnEdit_Clicked"/>
+            <Button x:Name="btnDelete" Text="Delete" BackgroundColor="DeepSkyBlue" CornerRadius="10" Clicked="btnDelete_Clicked" />
+            <Button x:Name="btnCancel" Text="Cancel" BackgroundColor="OrangeRed" CornerRadius="10" Clicked="btnCancel_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

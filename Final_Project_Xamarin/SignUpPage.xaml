@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Final_Project_Xamarin.SignUpPage"
+             NavigationPage.HasNavigationBar="False"
+             NavigationPage.HasBackButton="True">
+    <ContentPage.Content>
+        <StackLayout Padding="5" Spacing="15" VerticalOptions="CenterAndExpand">
+            <Frame
+                CornerRadius="40"
+                Padding="0"
+                HorizontalOptions="Center"
+                BackgroundColor="Transparent">
+                <Image x:Name="myImage" Source="profile.png" HeightRequest="150" WidthRequest="150"/>
+            </Frame>
+            <SearchBar
+                Placeholder="Git Username"
+                Text=""
+                x:Name="txtUsername"
+                SearchButtonPressed="txtUsername_SearchButtonPressed"
+                />
+            <Entry x:Name="txtPassword" IsEnabled="False"  Text="" Placeholder="Password" IsPassword="True"/>
+            <Entry x:Name="txtRepPassword" IsEnabled="False" Text="" Placeholder="Repeat Password" IsPassword="True"/>
+
+            <Button x:Name="btnCreate" Text="Create" IsEnabled="False" BackgroundColor="OrangeRed" CornerRadius="10" Clicked="btnCreate_Clicked"/>
+            <Button x:Name="btnCancel" Text="Cancel" BackgroundColor="OrangeRed" CornerRadius="10" Clicked="btnCancel_Clicked"/>
+
+            <ActivityIndicator x:Name="actIndicator" Color="DodgerBlue"></ActivityIndicator>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
